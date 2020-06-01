@@ -1,2 +1,2 @@
-# RADC_test_automation
+# RADC test automation
 Codes used for a RACD test automation system
