@@ -1,3 +1,4 @@
+//RACD test automation - Arduino Nano code
 #include <avr/wdt.h>
 
 int saida_preto = A0;

@@ -1,7 +1,5 @@
-// Processing application that demonstrates the Button class by creating a button
-// Draws a square in the window when the mouse cursor is over the button
-// Writes to the Processing IDE console pane when the button is clicked
-// 3 July 2015    http://startingelectronics.org
+//Program for RACD test visual command cisplay
+
 import processing.serial.*;       // Importa as bibliotecas para comunicação de Serie
 import java.awt.event.KeyEvent;   // Importa as bibliotecas para ler a informação da entrada de serie
 import java.io.IOException;
@@ -17,7 +15,7 @@ Button_2 seta_colorida_5;
 Button_2 seta_colorida_6;
 Button_2 seta_colorida_7;
 
-int clk = 1;       // number of times the button is clicked
+int clk = 1;       // número de vezes que o botão é clicado
 int clk_2 = 1;
 boolean colorido=false;
 boolean colorido_e_pb=false;
@@ -189,13 +187,8 @@ SecondApplet(boolean c, boolean c_pb, boolean p) {
 void setup() {
   surface.setResizable(true);
   background(255,255,255);
-  // Creating a custom PShape as a square, by
-  // specifying a series of vertices.
-  com_presenca = false;
+   com_presenca = false;
   com_presenca_anterior=false;
-  // Aqui tem um detalhe importante:
-  // onde tem 'Serial.list()[0]', caso dê algum erro
-  // troque isso pela porta que se Arduino está tipo "COM3" ok?
   tempo_ultima_passagem=0;
   
   println("Portas seriais disponíveis: ");
@@ -217,10 +210,6 @@ void update(){
     cor=3; // a seta pode ter apenas a cor preta
   }
 
-  /*do {
-    fundo = round(random(-0.5,2.4999)); //seleção de uma cor aleatória para o fundo
-  } while (fundo == cor);*/
-  //println(rot);
   s =  new Seta(rot, cor, /*fundo,*/ width, height); //criação do layout
 }
 
@@ -266,19 +255,6 @@ void draw(){
     }
 }
 
-/*void serialEvent (Serial Porta_serial) {
-  //if (Porta_serial.available()>0){
-      serial = Porta_serial.read();
-      println(serial);
-      if (serial>10){
-        com_presenca=true;
-      }
-      else {
-        com_presenca=false;
-      }  
-  //}
-}*/
-
 void serialEvent(Serial p) {
   // get message till ';')
 
@@ -292,12 +268,6 @@ void serialEvent(Serial p) {
       it=it+1;
       serial=float(message);
 
-/*      if (message == "1"){
-        serial = 1;
-      }
-      else{
-        serial = 0;
-      }*/
       if (serial==1){
         com_presenca=true;
       }

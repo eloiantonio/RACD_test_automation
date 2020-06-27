@@ -1,3 +1,5 @@
+//Arrow classes
+
 class Seta { 
   PShape s;
   float rotacao; // 0 <= rotacao <= 2
@@ -58,17 +60,7 @@ class Seta {
     else if (cor_seta==2){ s.fill(0,0,255); }
     else { s.fill(0,0,0); }
    
-   /* if (rotacao == 0) { 
-        translate(0,0); 
-    }
-    else if (rotacao == 1) { 
-        translate(0,altura);
-    }
-    else  if (rotacao == 2){ 
-        translate(largura,altura); 
-    }
-    
-    rotate(2*PI - rotacao*(PI/2));
+   
     if (rotacao == 1) { 
         translate(-(largura-altura)/2,(largura-altura)/2);
     }*/
