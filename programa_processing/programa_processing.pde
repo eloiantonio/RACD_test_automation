@@ -1,4 +1,4 @@
-//Program for RACD test visual command cisplay
+//Program for RACD test visual command display
 
 import processing.serial.*;       // Importa as bibliotecas para comunicação de Serie
 import java.awt.event.KeyEvent;   // Importa as bibliotecas para ler a informação da entrada de serie
